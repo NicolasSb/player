@@ -15,10 +15,10 @@ protected:
     ObjetMulti(string, string);
 
 public:
-    inline string getTitle() const;
-    inline string getPath() const;
-    inline void setTitle(const string);
-    inline void setPath(const string);
+    string getTitle() const;
+    string getPath() const;
+    void setTitle(const string);
+    void setPath(const string);
     virtual void display() const;
     virtual void play() const = 0;
 };
