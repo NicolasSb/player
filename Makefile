@@ -3,7 +3,7 @@ CPPFLAGS=`pkg-config gtkmm-3.0 --cflags --libs`
 LDFLAGS= -I/usr/include/libxml++-2.6 `pkg-config gtkmm-3.0 --cflags --libs`
 VPATH=back
 
-OBJS=main.o multimediaApi.o ObjetMulti.o audio_file.o
+OBJS=main.o multimediaApi.o ObjetMulti.o audio_file.o myWindow.o
 
 
 all: player
@@ -14,6 +14,7 @@ player: $(OBJS)
 	@mv *.o ./obj
 
 main.o: multimediaApi.h
+myWindow.o: multimediaApi.h
 multimediaApi.o: audio_file.h ObjetMulti.h
 ObjetMulti.o: audio_file.h
 

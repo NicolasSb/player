@@ -64,10 +64,18 @@ void MultimediaApi::copy_multi(const MultimediaApi& mul)
     }
 }
 
-void MultimediaApi::display()
+string MultimediaApi::getBibli()
 {
+    string res = "";
     for(list<ObjetMulti*>::iterator it = _data.begin(); it != _data.end(); ++it)
     {
-        (*it)->display();
+        res = res + (*it)->getTitle() +"\n";
     }
+    return res;
 }
+
+int MultimediaApi::getSize() const
+{
+    return _data.size();
+}
+

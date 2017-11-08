@@ -17,7 +17,8 @@ class MultimediaApi
         MultimediaApi& operator=(const MultimediaApi&);
         void addAudioFile(const string&, const string &);
         void deleteAudioFile(const string&);
-        void display();
+        string getBibli();
+        int getSize() const;
 
     private:
         void copy_multi(const MultimediaApi&);
